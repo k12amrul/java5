@@ -1,78 +1,62 @@
-//git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/k12amrul/java5.git
-// git push -u origin main
-
-      // 111
-
-// function radianToDegree(radian){
-//    const rad= radian*57.2957795 
-//    //57.295779513°
-
-//     return rad
-// } 
-// var a= radianToDegree(10)
-// var b= radianToDegree(25)
-// var c= radianToDegree(199)
-// console.log(a)
-// console.log(b)
-// console.log(c)
-
-
-
- //-----------// 111         -------
-
-//222222222
-
-// function isJavaScriptFile(str){
-//       const doesExist= str.includes(".js")
-//        return doesExist
-
-      
-//  }    
-//       var js =isJavaScriptFile("app.js")
-//       console.log(js)
-
 
      
-   
+
+    //Problem:1 convart radianToDegree  
+
+function radianToDegree(radian){
+   if(typeof radian !=="number"){
+                   return "please enter a valid number"
+            }
+   const degree= radian*57.2957795 
+   const twoFixedDegree=degree.toFixed(2)
   
 
+    return twoFixedDegree
+} 
+var a= radianToDegree(10)
+
+console.log(a)
+
+   //Problem:2  isJavaScriptFile 
+
+function isJavaScriptFile(str){
+     if(typeof str !=="string"){
+          return "please enter a string"
+}
+
+      const doesExist= str.toLowerCase().endsWith(".js")
+       return doesExist
+
+      
+ }    
+      var js =isJavaScriptFile("app.js")
+      console.log(js)
 
 
-//22222222222
+     // Problem 3: calculateOilPrice
 
-//333
+ function oilPrice(dieselNeed,petrolNeed,octaneNeed ){
+      if(typeof dieselNeed !=="number" && petrolNeed !=="number" && octaneNeed !=="number"){
+          return "please enter  valid number"
+       }
+      
+      const perLitterDieselPraice=114
+      const perLitterPetrolParice=130
+      const perLitterOctanePraice=135
 
-//  function oilPrice(a,b,c){
-//       if(typeof a !=="number" && b !=="number" && c !=="number"){
-//           return "please enter a number"
-//        }
-//       console.log(a,b,c)
-//       const perLiterDigelPrice=114
-//       const p=130
-//       const oc=135
+      const dieselPrice=perLitterDieselPraice*dieselNeed
+      const petrolPrice=perLitterPetrolParice*petrolNeed
+      const octanePrice=perLitterOctanePraice*octaneNeed
 
-//       const digelPrice=perLiterDigelPrice*a
-//       const pettolPrice=p*b
-//       const octelPrice=oc*c
-//       const totalPraice=digelPrice+pettolPrice+octelPrice
+      const totalPraice=dieselPrice+petrolPrice+octanePrice
     
-//      return totalPraice
+     return totalPraice
+  }
 
+    const tp= oilPrice(30,20,10)
+    console.log(tp)
 
-
-
-// }
-//     const tp= oilPrice(2,1,1)
-//     console.log(tp)
-
-//   node a.js
-//333
-
-//44
+   //Problem 4: publicBusFare
 
  function publicBusFare(pasengar){
       if(typeof pasengar !=="number"){
@@ -82,39 +66,42 @@
       const basPasengar=pasengar %50
       const maicroPasengar=basPasengar%11
       const localBasPasengar =maicroPasengar*250
-      console.log(basPasengar)
-      console.log(maicroPasengar)
+
       return localBasPasengar
 
 
-}
+ }
 
 
-const localBasVara= publicBusFare(365)
+const localBasVara= publicBusFare(236)
  console.log(localBasVara)
 
 
-//4444444
-
-        //55555
-//   function isBestFriend(obj1,obj2){
-//       if(obj1.name===obj2.fraiend && obj1.fraiend===obj2.name){
-//           return true  
-//       }else{
-//            return false
-//       }
 
 
+     //  Problem 5: isBestFriend
 
-//   }
+  function isBestFriend(obj1,obj2){
+     if(typeof obj1 !=="object" &&  obj2 !=="object" ){
+                return "please enter  object"
+          }
+
+      if(obj1.name===obj2.fraiend && obj1.fraiend===obj2.name){
+          return true  
+      }else{
+           return false
+      }
+  }
   
-//   const obj1={name:"kamrul",fraiend:"hasan"}
-//   const obj2={name:"hasan",fraiend:"kamrul"}
-//        var obj=  isBestFriend(obj1,obj2)
-//        console.log(obj)
-
-//5555
+  const obj1={name:"kamrul",fraiend:"hasan"}
+  const obj2={name:"hasan",fraiend:"kamrul"}
 
 
+  const obj=  isBestFriend(obj1,obj2)
+       console.log(obj)
 
-  //   node a.js
+
+
+
+
+  
